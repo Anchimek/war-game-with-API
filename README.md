@@ -2,4 +2,4 @@
 
 - With Deck of Card API (https://deckofcardsapi.com/).
 
-https://anchimek.github.io/war-game/
+https://anchimek.github.io/war-game-with-API/
