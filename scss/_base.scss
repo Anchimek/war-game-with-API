@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background: url('../img/table.jpg');
+    background-size: cover;
+    font-family: 'Staatliches', cursive;
+    color: #FFF9E8;
+    letter-spacing: 1.25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto 500px auto;
+    grid-template-rows: 100vh;
+    .game-board {
+        grid-area: 1 / 2 / 2 / 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100vh;
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: .5em;
+            .cards-remaining {
+                margin: 0;
+                color: #FFEA00;
+            }
+        }
+        .bottom {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1em;
+        }
+    }
+}
+@media all and (max-width: 500px) {
+    .grid {
+        grid-template-columns: auto 300px auto;
+    }
+}
+
+a.author,
+a.author:visited,
+a.author:active {
+    position: absolute;
+    bottom: 0;
+    left: 1em;
+    color: #FFF9E8;
+    text-decoration: none;
+    font-size: .75rem;
+    width: 4em;
+    height: 2em;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: .85em;
+    p {
+        margin: 0;
+    }
+    .winner {
+        font-size: 2.3rem;
+        color: #C8A48C;
+        margin-bottom: .5em;
+        text-decoration: underline;
+    }
+    @media all and (max-width: 700px) {
+        .winner {
+            font-size: 1.25rem;
+        }
+    }
+    .card {
+        height: 11rem;
+        width: 8rem;
+        border: 1px solid #000;
+        border-radius: .5em;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: .5em;
+        }
+    }
+}
+
+button {
+    font-family: 'Staatliches', cursive;
+    font-size: 1.15rem;
+    height: 2.25rem;
+    width: 8rem;
+    border-radius: .5em;
+    border: none;
+    cursor: pointer;
+    background-color: #FFEA00;
+    &:hover,
+    &:focus {
+        background-color: rgba(255, 234, 0, 0.87);
+    }
+    &:disabled {
+        cursor: not-allowed;
+    }
+}

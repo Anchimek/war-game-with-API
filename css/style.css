@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+body {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100vh;
+  background: url("../img/table.jpg");
+  background-size: cover;
+  font-family: 'Staatliches', cursive;
+  color: #FFF9E8;
+  letter-spacing: 1.25px;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 500px auto;
+      grid-template-columns: auto 500px auto;
+  -ms-grid-rows: 100vh;
+      grid-template-rows: 100vh;
+}
+
+.grid .game-board {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100vh;
+}
+
+.grid .game-board .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: .5em;
+}
+
+.grid .game-board .top .cards-remaining {
+  margin: 0;
+  color: #FFEA00;
+}
+
+.grid .game-board .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1em;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: auto 300px auto;
+        grid-template-columns: auto 300px auto;
+  }
+}
+
+a.author,
+a.author:visited,
+a.author:active {
+  position: absolute;
+  bottom: 0;
+  left: 1em;
+  color: #FFF9E8;
+  text-decoration: none;
+  font-size: .75rem;
+  width: 4em;
+  height: 2em;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: .85em;
+}
+
+.cards p {
+  margin: 0;
+}
+
+.cards .winner {
+  font-size: 2.3rem;
+  color: #C8A48C;
+  margin-bottom: .5em;
+  text-decoration: underline;
+}
+
+@media all and (max-width: 700px) {
+  .cards .winner {
+    font-size: 1.25rem;
+  }
+}
+
+.cards .card {
+  height: 11rem;
+  width: 8rem;
+  border: 1px solid #000;
+  border-radius: .5em;
+}
+
+.cards .card img {
+  width: 100%;
+  height: 100%;
+  border-radius: .5em;
+}
+
+button {
+  font-family: 'Staatliches', cursive;
+  font-size: 1.15rem;
+  height: 2.25rem;
+  width: 8rem;
+  border-radius: .5em;
+  border: none;
+  cursor: pointer;
+  background-color: #FFEA00;
+}
+
+button:hover, button:focus {
+  background-color: rgba(255, 234, 0, 0.87);
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+/*# sourceMappingURL=style.css.map */

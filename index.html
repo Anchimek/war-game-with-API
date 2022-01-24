@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War game</title>
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+    <div class="grid">
+
+        <a href="https://unsplash.com/@mparzuchowski?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="author" target="_blank">bg author</a> 
+        
+       <div class="game-board">
+            <div class="top">
+                <button id='new-game'>New game</button>
+                <p class="cards-remaining" id='cards-remaining'></p>
+            </div>
+
+            <div class="cards">
+                <p class="winner" id="winner">War game</p>
+                <p class="cpu-points" id="cpu-points">CPU points: 0</p>
+                <div class="card" id="card-one">
+                    <img src='./img/cardbg.jpg' alt='' />
+                </div>
+                <div class="card" id="card-two">
+                    <img src='./img/cardbg.jpg' alt='' />
+                </div>
+                <p class="user-points" id="user-points">My points: 0</p>
+            </div>
+        
+            <div class="bottom">
+                <button id="draw-cards" disabled>Draw cards</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
